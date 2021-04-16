@@ -1,5 +1,7 @@
 package gui;
 
+import buttons.CloseListener;
+
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
@@ -10,6 +12,10 @@ public class GUI {
     JPanel panel;
     JFrame frame;
     List<JCheckBox> checkFieldList;
+
+    public List<JCheckBox> getCheckFieldList() {
+        return checkFieldList;
+    }
 
     String[] instrumentsName = {"Bass drum", "Low Floor Tom", "Pedal Hi-hat", "Low Tom", "Ride Cymbal", "Chinese Cymbal",
             "Ride Bell", "Tambourine", "Splash Cymbal", "Cowbell", "Crash Cymbal 2", "Vibra Slap",
@@ -68,6 +74,8 @@ public class GUI {
         exit.setForeground(Color.WHITE);
         exit.setBackground(Color.darkGray);
         buttonsField.add(exit);
+        exit.addActionListener(new CloseListener());
+
 
     Box namesField = new Box(BoxLayout.Y_AXIS);
         namesField.setFont(new Font("New Courier", Font.BOLD,12));
