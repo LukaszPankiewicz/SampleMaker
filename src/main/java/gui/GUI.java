@@ -1,6 +1,7 @@
 package gui;
 
 import buttons.CloseListener;
+import buttons.SaveListener;
 
 import javax.swing.*;
 import java.awt.*;
@@ -33,7 +34,7 @@ public class GUI {
         backgroundPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
     Box buttonsField = new Box(BoxLayout.Y_AXIS);
-    checkFieldList = new ArrayList<JCheckBox>();
+    checkFieldList = new ArrayList<>();
 
     JButton start = new JButton("Start");
         start.setForeground(Color.WHITE);
@@ -59,6 +60,7 @@ public class GUI {
         save.setForeground(Color.WHITE);
         save.setBackground(Color.darkGray);
         buttonsField.add(save);
+        save.addActionListener(new SaveListener(getCheckFieldList()));
 
     JButton load = new JButton("Load sample");
         load.setForeground(Color.WHITE);
