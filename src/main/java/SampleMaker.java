@@ -11,6 +11,4 @@ public class SampleMaker {
     private void gui() {
     }
 
-
-
 }
