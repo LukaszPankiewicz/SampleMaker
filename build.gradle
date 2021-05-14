@@ -17,6 +17,7 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
     testImplementation group: 'org.mockito', name: 'mockito-junit-jupiter', version: '3.7.7'
 }
+
 mainClassName = 'SampleMaker'
 
 test {
